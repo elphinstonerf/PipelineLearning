@@ -1,5 +1,4 @@
 pipeline {
-    println("Hello")
     agent any
     stages {
         stage ('Buzz Buzz') {
