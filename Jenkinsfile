@@ -4,7 +4,7 @@ pipeline {
         stage ('Buzz Build') {
             steps {
                 echo "Hello, Jenkins!"
-                ls
+                sh 'pwd'
             }   
         }
         stage ('Bees Bees') {
