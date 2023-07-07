@@ -3,8 +3,9 @@ pipeline {
     stages {
         stage ('Buzz Build') {
             steps {
-                sh 'ls'
+                sh '''
                 echo "HELLLOOOO"
+                '''
             }   
         }
         stage ('Bees Bees') {
