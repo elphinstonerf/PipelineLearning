@@ -10,6 +10,7 @@ pipline {
             steps {
                 echo 'Buzz, Bees, Buzz!'
                 echo 'Bees Buzzing!'
+                echo 'Testing'
             }
         }
     }
