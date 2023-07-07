@@ -7,8 +7,8 @@ pipeline {
                 powershell 'Get-ChildItem'
                 
                  powershell '''
-                $gitBashPath = "C:\\Program Files\\Git\\git-bash.exe" // Update with the actual path to git-bash.exe
-                $command = "echo Hello, Git Bash!" // Replace with your desired Git Bash command
+                $gitBashPath = ""C:\Program Files\Git\bin\bash.exe""
+                $command = "echo Hello, Git Bash!" 
                 Start-Process -FilePath $gitBashPath -ArgumentList "-c", $command -Wait
                 '''
             }   
