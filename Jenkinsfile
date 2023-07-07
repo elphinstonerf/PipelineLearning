@@ -1,16 +1,13 @@
 pipeline {
-    println("Hello")
     agent any
     stages {
-        stage ('Buzz Buzz') {
+        stage('Build') {
             steps {
-                print('Bees Buzz!')
-            }
-        }
-        stage ('Bees Bees') {
-            steps {
-                echo 'Buzz, Bees, Buzz!'
-                echo 'Bees Buzzing!'
+                sh 'echo "Hello World"'
+                sh '''
+                    echo "Multiline shell steps works too"
+                    ls -lah
+                '''
             }
         }
     }
