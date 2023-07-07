@@ -3,9 +3,7 @@ pipeline {
     stages {
         stage ('Buzz Build') {
             steps {
-                sh '''
-                echo "HELLLOOOO"
-                '''
+                sh 'echo "Hello, Jenkins!"'
             }   
         }
         stage ('Bees Bees') {
