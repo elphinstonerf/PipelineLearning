@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage ('Buzz Build') {
             steps {
-                sh 'echo "Hello, Git Bash!"'
-                sh 'ls'
+                powershell 'Write-Host "Hello, PowerShell!"'
+                powershell 'Get-ChildItem'
             }   
         }
         stage ('Bees Bees') {
