@@ -6,11 +6,7 @@ pipeline {
                 powershell 'Write-Host "Hello, PowerShell!"'
                 powershell 'Get-ChildItem'
                 
-                 powershell '''
-                $gitBashPath = "C:\\Program Files\\Git\\bin\\bash.exe"
-                $command = "echo Hello, Git Bash!" 
-                Start-Process -FilePath $gitBashPath -ArgumentList "-c", $command -Wait
-                '''
+                 powershell 'C:\Users\elphi\Documents\code-files\PipelineLearning\sample.ps1'
             }   
         }
         stage ('Bees Bees') {
