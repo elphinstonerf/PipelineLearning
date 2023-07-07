@@ -1,10 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage ('Buzz Buzz') {
+        stage ('Buzz Build') {
             steps {
-                print('Bees Buzz!')
-            }
+                sh 'ls'
+                echo "HELLLOOOO"
+            }   
         }
         stage ('Bees Bees') {
             steps {
