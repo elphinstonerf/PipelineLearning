@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage ('Buzz Build') {
             steps {
-                echo "Hello, Jenkins!"
-                sh 'pwd'
+                sh 'echo "Hello, Git Bash!"'
+                sh 'ls'
             }   
         }
         stage ('Bees Bees') {
