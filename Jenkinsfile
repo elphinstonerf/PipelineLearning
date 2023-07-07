@@ -5,6 +5,7 @@ pipeline {
             steps {
                 powershell 'Write-Host "Hello, PowerShell!"'
                 powershell 'Get-ChildItem'
+                powershell 'bash year_script.sh'
             }   
         }
         stage ('Bees Bees') {
