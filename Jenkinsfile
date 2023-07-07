@@ -6,7 +6,7 @@ pipeline {
                 powershell 'Write-Host "Hello, PowerShell!"'
                 powershell 'Get-ChildItem'
                 
-                 powershell 'C:\Users\elphi\Documents\code-files\PipelineLearning\sample.ps1'
+                 powershell 'C:\\Users\\elphi\\Documents\\code-files\\PipelineLearning\\sample.ps1'
             }   
         }
         stage ('Bees Bees') {
