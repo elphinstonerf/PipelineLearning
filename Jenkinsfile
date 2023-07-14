@@ -21,7 +21,7 @@ pipeline {
 
         stage('Test B Stage') {
           steps {
-            bat 'Start-Sleep -Seconds 5'
+            bat 'waitfor SomethingThatIsNeverHappening /t 100 '
           }
         }
 
