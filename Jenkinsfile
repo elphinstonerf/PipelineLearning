@@ -21,7 +21,7 @@ pipeline {
         task['Test B'] = {
             stage{'Test B Stage'}
                 steps {
-                    bat 'waitfor SomethingThatIsNeverHappening /t 20 '
+                    echo 'hello there'
                 }
         }
         parallel(task)
