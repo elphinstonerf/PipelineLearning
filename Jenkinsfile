@@ -22,16 +22,30 @@ pipeline {
         stage('Test B Stage') {
           steps {
             bat '''
-                echo 5
-                ping -n 2 127.0.0.1>nul
-                echo 4
-                ping -n 2 127.0.0.1>nul
-                echo 3
-                ping -n 2 127.0.0.1>nul
-                echo 2
-                ping -n 2 127.0.0.1>nul
-                echo 1
-                ping -n 2 127.0.0.1>nul
+                @echo off
+                SetLocal EnableDelayedExpansion
+
+                REM countdown of 5 seconds
+                set count=5
+
+                REM prepare carriage return
+                FOR /F %%a IN ('copy /Z "%~dpf0" nul') DO set "carret=%%a"
+
+                :ONE_SEC
+                REM print message
+                set /p =%count% seconds to go...!carret!<nul
+                REM wait one sec
+                ping -n 2 127.0.0.1 > nul 2>&1
+                REM decrement
+                set /a count-=1
+                IF %count% GTR 0 goto :ONE_SEC
+
+                REM last print, now you can use echo but don't forget: you have to override each character of the previous print! so fill all remaining place with whitespaces
+                echo Done waiting...   
+                REM  X seconds to go...
+
+                EndLocal
+                exit /b 0
                 '''
           }
         }
