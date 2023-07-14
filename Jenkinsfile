@@ -11,9 +11,9 @@ pipeline {
     }
 
     stage('Bees Bees') {
-      def task = [:]
-      task['Bees Bees'] = {
-        steps {
+      parallel {
+        stage('Bees Bees') {
+          steps {
             echo 'Buzz, Bees, Buzz!'
             echo 'Bees Buzzing!'
           }
@@ -21,13 +21,14 @@ pipeline {
 
         stage('Test B Stage') {
           steps {
-            bat 'waitfor SomethingThatIsNeverHappening /t 20'
+            bat 'waitfor SomethingThatIsNeverHappening /t 20 '
           }
         }
-        parallel(task)
 
       }
     }
+
+  }
   environment {
     WORKER_NAME = 'Buzz'
   }
