@@ -21,7 +21,7 @@ pipeline {
 
         stage('Test B Stage') {
           steps {
-            bat 'waitfor SomethingThatIsNeverHappening /t 20 2>NULL'
+            bat 'PING 1.1.1.1 -n 1 -w 30000 >NUL'
           }
         }
 
