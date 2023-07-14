@@ -21,8 +21,7 @@ pipeline {
 
         stage('Test B Stage') {
           steps {
-            sh '''sleep 10
-echo done.'''
+            sh 'Start-Sleep -Seconds 5'
           }
         }
 
