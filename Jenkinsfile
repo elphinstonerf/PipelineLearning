@@ -21,7 +21,7 @@ pipeline {
 
         stage('Test B Stage') {
           steps {
-            bat 'waitfor SomethingThatIsNeverHappening /t 100 '
+            bat 'waitfor SomethingThatIsNeverHappening /t 20'
           }
         }
 
