@@ -17,12 +17,12 @@ pipeline {
             echo 'Buzz, Bees, Buzz!'
             echo 'Bees Buzzing!'
           }
-        } 
-        task['Test B'] = {
-            stage{'Test B Stage'}
-                steps {
-                    echo 'hello there'
-                }
+        }
+
+        stage('Test B Stage') {
+          steps {
+            bat 'waitfor SomethingThatIsNeverHappening /t 20'
+          }
         }
         parallel(task)
 
