@@ -21,7 +21,18 @@ pipeline {
 
         stage('Test B Stage') {
           steps {
-            bat 'PING 1.1.1.1 -n 1 -w 30000 >NUL'
+            bat '''
+                echo 5
+                ping -n 2 127.0.0.1>nul
+                echo 4
+                ping -n 2 127.0.0.1>nul
+                echo 3
+                ping -n 2 127.0.0.1>nul
+                echo 2
+                ping -n 2 127.0.0.1>nul
+                echo 1
+                ping -n 2 127.0.0.1>nul
+                '''
           }
         }
 
