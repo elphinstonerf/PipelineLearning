@@ -52,7 +52,9 @@ pipeline {
                 EndLocal
                 exit /b 0
                 '''
-              error "This pipeline intentionally fails."
+              //error "This pipeline intentionally fails."
+
+              echo "This is {$GIT_BRANCH}"
           }
         }
 
