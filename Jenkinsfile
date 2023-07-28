@@ -24,7 +24,7 @@ pipeline {
 
         }
 
-        stag('Test B Stage') {
+        stage('Test B Stage') {
           steps {
             bat '''
                 @echo off
