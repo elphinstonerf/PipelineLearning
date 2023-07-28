@@ -63,6 +63,9 @@ pipeline {
         success {
           echo "WooHoo!"
         }
+        failure {
+          echo "OhhNoo!"
+        }
       }
     } 
   }
