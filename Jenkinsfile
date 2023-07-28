@@ -56,14 +56,14 @@ pipeline {
         }
 
       }
-    }
-    post {
-      always {
-        echo "You Know IT"
+      post {
+        always {
+          echo "You Know IT"
+        }
+        success {
+          echo "WooHoo!"
+        }
       }
-      success {
-        echo "WooHoo!"
-      }
-    }
+    } 
   }
 }
