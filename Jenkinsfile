@@ -54,7 +54,8 @@ pipeline {
                 '''
               //error "This pipeline intentionally fails."
 
-              echo "This is {$GIT_BRANCH}"
+              echo "This is Branch: $GIT_BRANCH"
+              echo "This is Commit: $GIT_COMMIT"
           }
         }
 
