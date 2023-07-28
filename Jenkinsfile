@@ -18,6 +18,7 @@ pipeline {
             echo 'Bees Buzzing!'
             input(message: 'Deploy to Stage', ok: 'Yes')
           }
+
         }
 
         stage('Test B Stage') {
