@@ -1,4 +1,7 @@
 pipeline {
+  environment {
+    WORKER_NAME = 'Buzz'
+  }
   agent any
   stages {
     stage('Buzz Build') {
@@ -54,9 +57,13 @@ pipeline {
 
       }
     }
-
-  }
-  environment {
-    WORKER_NAME = 'Buzz'
+    post {
+      always {
+        echo "You Know IT"
+      }
+      success {
+        echo "WooHoo!"
+      }
+    }
   }
 }
