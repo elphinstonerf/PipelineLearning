@@ -16,6 +16,7 @@ pipeline {
           steps {
             echo 'Buzz, Bees, Buzz!'
             echo 'Bees Buzzing!'
+            input(message: 'Deploy to Stage', ok: 'Yes')
           }
         }
 
