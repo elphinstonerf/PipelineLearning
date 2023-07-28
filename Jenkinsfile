@@ -52,6 +52,7 @@ pipeline {
                 EndLocal
                 exit /b 0
                 '''
+              error "This pipeline intentionally fails."
           }
         }
 
