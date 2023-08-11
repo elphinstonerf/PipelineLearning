@@ -7,12 +7,7 @@ pipeline {
     stage('Buzz Build') {
       steps {
 
-        // send to email
-        emailext (
-                  to: 'elphinstone88@yahoo.com', // Replace with your email address
-                  subject: "Build Started: ${currentBuild.fullDisplayName}",
-                  body: 'The build has started.'
-              )
+        when {branch development}
 
 
         powershell 'Write-Host "Hello, PowerShell!"'
