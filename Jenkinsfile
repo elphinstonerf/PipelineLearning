@@ -6,6 +6,15 @@ pipeline {
   stages {
     stage('Buzz Build') {
       steps {
+
+        // send to email
+        emailext (
+                  to: 'elphinstone88@yahoo.com', // Replace with your email address
+                  subject: "Build Started: ${currentBuild.fullDisplayName}",
+                  body: 'The build has started.'
+              )
+
+
         powershell 'Write-Host "Hello, PowerShell!"'
         powershell 'Get-ChildItem'
         powershell 'C:\\Users\\elphi\\Documents\\code-files\\PipelineLearning\\sample.ps1'
@@ -63,6 +72,12 @@ pipeline {
       post {
         always {
           echo "You Know IT"
+          // send to email
+        emailext (
+                  to: 'elphinstone88@yahoo.com', // Replace with your email address
+                  subject: "Build Result: ${currentBuild.result}",
+                  body: 'The build has Finished.'
+              )
         }
         success {
           echo "WooHoo!"
