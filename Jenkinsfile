@@ -7,7 +7,7 @@ pipeline {
     stage('Buzz Build') {
       steps {
 
-        when {branch development}
+        when {branch 'development'}
 
 
         powershell 'Write-Host "Hello, PowerShell!"'
