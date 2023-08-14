@@ -4,7 +4,7 @@ pipeline {
   }
   agent any
   stages {
-    stage {
+    stage ('Testing Here') {
       steps {
         echo "Hello"
         sh '''
