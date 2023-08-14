@@ -7,9 +7,7 @@ pipeline {
     stage ('Testing Here') {
       steps {
         echo "Hello"
-        sh '''
-        dir
-        '''
+        powershell 'dir'
       }
     }
   }
