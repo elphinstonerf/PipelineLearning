@@ -4,6 +4,20 @@ pipeline {
   }
   agent any
   stages {
+    stage {
+      steps {
+        echo "Hello"
+        sh '''
+        ls
+        '''
+      }
+    }
+  }
+}
+
+
+
+    /**
     stage('Buzz Build') {
       steps {
 
@@ -84,3 +98,4 @@ pipeline {
     } 
   }
 }
+**/
