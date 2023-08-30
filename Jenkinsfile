@@ -10,7 +10,7 @@ pipeline {
         powershell '''
         dir
         Write-Host "Hello, this is a message."
-        dir
+        New-Item testing.txt
         '''
       }
     }
