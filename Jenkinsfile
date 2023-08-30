@@ -9,6 +9,7 @@ pipeline {
         echo "Hello"
         powershell '''
         dir
+        dir
         '''
       }
     }
