@@ -11,6 +11,8 @@ pipeline {
         dir
         Write-Host "Hello, this is a message."
         New-Item testing.txt
+        Write-Host "New file created."
+        dir
         '''
       }
     }
