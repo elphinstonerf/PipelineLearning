@@ -4,13 +4,22 @@ pipeline {
   }
   agent any
   stages {
-    stage {
+    stage("Phase 1") {
       steps {
         echo "Hello"
         sh '''
         ls
         '''
       }
+    }
+    stage("Phase 2 testing"){
+        steps{
+            script{
+                powershell"""
+                New-Item testing.txt
+                """
+            }
+        }
     }
   }
 }
