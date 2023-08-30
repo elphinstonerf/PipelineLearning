@@ -9,7 +9,7 @@ pipeline {
         echo "Hello"
         powershell '''
         dir
-        dir
+        Write-Host "Hello, this is a message."
         '''
       }
     }
